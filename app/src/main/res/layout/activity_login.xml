@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/unmsm_fondo"
+    tools:context=".activity_login">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9c00BCD4"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_material"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/content_referencia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/escudo_unmsm" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/siglas_sistema"
+                android:textColor="@color/colorIcons"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/nombre_sistema"
+                android:textColor="@color/colorIcons"
+                android:textSize="@dimen/texto_medio"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_margin20dp"
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/layout_margin">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_margin"
+                android:theme="@style/TextInputBlanco">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/login_edtUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usuario"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_margin"
+                android:theme="@style/TextInputBlanco"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorIcons">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/login_edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:inputType="numberPassword" />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/login_btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Ingresar"
+                android:textColor="@color/colorIcons" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
